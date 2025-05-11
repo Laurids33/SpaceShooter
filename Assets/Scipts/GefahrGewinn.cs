@@ -8,8 +8,8 @@ public class GefahrGewinn : MonoBehaviour
 
     void Start()
     {
-        xAenderungBasis = 0.6f * Time.deltaTime;
-        xAenderung = 0.6f * Time.deltaTime;
+        xAenderungBasis = 2.5f * Time.deltaTime;
+        xAenderung = 2.5f * Time.deltaTime;
     }
 
     void Update()

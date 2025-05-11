@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Spieler : MonoBehaviour
 {
@@ -8,6 +9,18 @@ public class Spieler : MonoBehaviour
     public GefahrGewinn gefahrGewinnKlasse;
     int energie = 10;
     public GameObject balkenWert;
+
+    public GameObject[] gefahr = new GameObject[3];
+    public GameObject gewinn;
+    float zeitStart;
+    bool spielGestartet = true;
+    public TextMeshProUGUI zeitAnzeige;
+    public TextMeshProUGUI infoAnzeige;
+
+    void Start()
+    {
+        zeitStart = Time.deltaTime;
+    }
 
     void Update()
     {
@@ -28,6 +41,11 @@ public class Spieler : MonoBehaviour
                     break;
                 }
             }
+        }
+
+        if(spielGestartet)
+        {
+            zeitAnzeige.text = string.Format("Zeit: {0,6:0.0} sec.", Time.time - zeitStart);
         }
     }
 
@@ -50,5 +68,20 @@ public class Spieler : MonoBehaviour
     {
         energie += wert;
         balkenWert.transform.localScale = new Vector3(0.8f, energie / 2.0f, 0);
+        if (energie > 40) EndeSpiel("gewonnen");
+        if (energie < 1) EndeSpiel("verloren");
+    }
+
+    void EndeSpiel(string text)
+    {
+        spielGestartet = false;
+        infoAnzeige.text = "Sie haben " + text;
+
+        for (int i = 0; i < 3; i++)
+        {
+            geschoss[i].SetActive(false);
+            gefahr[i].SetActive(false);
+        }
+        gewinn.SetActive(false);
     }
 }
