@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 157639070}
   - component: {fileID: 157639072}
   - component: {fileID: 157639071}
+  - component: {fileID: 157639073}
   m_Layer: 0
   m_Name: Gefahr1
   m_TagString: Gefahr
@@ -519,6 +520,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &157639073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157639069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58912fa832b8530d2b8c6ff4e05bc078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xAenderungBasis: 0
 --- !u!1 &188031130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,6 +1220,7 @@ GameObject:
   - component: {fileID: 1324807411}
   - component: {fileID: 1324807410}
   - component: {fileID: 1324807409}
+  - component: {fileID: 1324807412}
   m_Layer: 0
   m_Name: Gewinn
   m_TagString: Gewinn
@@ -1329,6 +1344,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1324807412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324807408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58912fa832b8530d2b8c6ff4e05bc078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xAenderungBasis: 0
 --- !u!1 &1341091471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1822,7 @@ GameObject:
   - component: {fileID: 1884116278}
   - component: {fileID: 1884116280}
   - component: {fileID: 1884116279}
+  - component: {fileID: 1884116281}
   m_Layer: 0
   m_Name: Gefahr0
   m_TagString: Gefahr
@@ -1917,6 +1946,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1884116281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884116277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58912fa832b8530d2b8c6ff4e05bc078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xAenderungBasis: 0
 --- !u!1 &1978514491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2190,6 +2232,7 @@ GameObject:
   - component: {fileID: 2109711649}
   - component: {fileID: 2109711651}
   - component: {fileID: 2109711650}
+  - component: {fileID: 2109711652}
   m_Layer: 0
   m_Name: Gefahr2
   m_TagString: Gefahr
@@ -2313,6 +2356,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2109711652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109711648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58912fa832b8530d2b8c6ff4e05bc078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xAenderungBasis: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
