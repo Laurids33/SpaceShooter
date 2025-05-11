@@ -14,7 +14,6 @@ public class Spieler : MonoBehaviour
         transform.position = new Vector3(transform.position.x, yNeu, 0);
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("a");
             for(int i = 0; i < 3; i++)
             {
                 if (!geschoss[i].activeSelf)
