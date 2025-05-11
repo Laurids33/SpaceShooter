@@ -5,6 +5,10 @@ public class Spieler : MonoBehaviour
     readonly float eingabeFaktor = 10;
     public GameObject[] geschoss = new GameObject[3];
 
+    public GefahrGewinn gefahrGewinnKlasse;
+    int energie = 10;
+    public GameObject balkenWert;
+
     void Update()
     {
         float yEingabe = Input.GetAxis("Vertical");
@@ -25,5 +29,26 @@ public class Spieler : MonoBehaviour
                 }
             }
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        coll.gameObject.transform.position = new Vector3(Random.Range(9.5f, 19.0f), Random.Range(-4.75f, 4.75f), 0);
+        gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
+        if (coll.gameObject.CompareTag("Gefahr"))
+        {
+            EnergieAnzeige(-1);
+        }
+        else if (coll.gameObject.CompareTag("Gewinn"))
+        {
+            EnergieAnzeige(1);
+        }
+        Debug.Log(energie);
+    }
+
+    public void EnergieAnzeige(int wert)
+    {
+        energie += wert;
+        balkenWert.transform.localScale = new Vector3(0.8f, energie / 2.0f, 0);
     }
 }

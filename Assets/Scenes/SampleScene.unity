@@ -298,6 +298,8 @@ MonoBehaviour:
   - {fileID: 2025309480}
   - {fileID: 188031130}
   - {fileID: 994886809}
+  gefahrGewinnKlasse: {fileID: 1324807412}
+  balkenWert: {fileID: 142141018}
 --- !u!1 &142141018
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +451,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -533,6 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xAenderungBasis: 0
+  spielerKlasse: {fileID: 3286124}
 --- !u!1 &188031130
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188031131}
   - component: {fileID: 188031134}
-  - component: {fileID: 188031133}
+  - component: {fileID: 188031136}
   - component: {fileID: 188031132}
   - component: {fileID: 188031135}
   m_Layer: 0
@@ -614,33 +617,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
---- !u!50 &188031133
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188031130}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &188031134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -708,6 +684,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1799ad555c56081d381373c90ead3e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gefahrGewinnKlasse: {fileID: 1324807412}
+  explosionRot: {fileID: 8264108257363433171, guid: 3aa59046c0d45e6d1ac2d26158219e3e, type: 3}
+  explosionGruen: {fileID: 8264108257363433171, guid: 95169b47b3ba1a5518339a97a6acdc21, type: 3}
+  spielerKlasse: {fileID: 3286124}
+--- !u!50 &188031136
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188031130}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &218960460
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 994886810}
   - component: {fileID: 994886813}
-  - component: {fileID: 994886812}
+  - component: {fileID: 994886815}
   - component: {fileID: 994886811}
   - component: {fileID: 994886814}
   m_Layer: 0
@@ -1014,33 +1021,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
---- !u!50 &994886812
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994886809}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &994886813
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1108,6 +1088,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1799ad555c56081d381373c90ead3e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gefahrGewinnKlasse: {fileID: 1324807412}
+  explosionRot: {fileID: 8264108257363433171, guid: 3aa59046c0d45e6d1ac2d26158219e3e, type: 3}
+  explosionGruen: {fileID: 8264108257363433171, guid: 95169b47b3ba1a5518339a97a6acdc21, type: 3}
+  spielerKlasse: {fileID: 3286124}
+--- !u!50 &994886815
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994886809}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1020750937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xAenderungBasis: 0
+  spielerKlasse: {fileID: 3286124}
 --- !u!1 &1341091471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,7 +1887,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1959,6 +1971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xAenderungBasis: 0
+  spielerKlasse: {fileID: 3286124}
 --- !u!1 &1978514491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,7 +2069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2025309481}
   - component: {fileID: 2025309484}
-  - component: {fileID: 2025309483}
+  - component: {fileID: 2025309486}
   - component: {fileID: 2025309482}
   - component: {fileID: 2025309485}
   m_Layer: 0
@@ -2127,33 +2140,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
---- !u!50 &2025309483
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025309480}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &2025309484
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2221,6 +2207,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1799ad555c56081d381373c90ead3e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gefahrGewinnKlasse: {fileID: 1324807412}
+  explosionRot: {fileID: 8264108257363433171, guid: 3aa59046c0d45e6d1ac2d26158219e3e, type: 3}
+  explosionGruen: {fileID: 8264108257363433171, guid: 95169b47b3ba1a5518339a97a6acdc21, type: 3}
+  spielerKlasse: {fileID: 3286124}
+--- !u!50 &2025309486
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025309480}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2109711648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,7 +2302,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2369,6 +2386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xAenderungBasis: 0
+  spielerKlasse: {fileID: 3286124}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
