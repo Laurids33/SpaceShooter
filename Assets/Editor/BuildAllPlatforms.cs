@@ -19,7 +19,7 @@ public class BuildAllPlatforms
         BuildMacOS();
     }
 
-    [MenuItem("Build/Windows Intel 64-bit")]
+    [MenuItem("Build/Windows Intel64")]
     public static void BuildWindowsIntel64()
     {
         PlayerSettings.SetArchitecture(NamedBuildTarget.Standalone, 1); // x86_64
